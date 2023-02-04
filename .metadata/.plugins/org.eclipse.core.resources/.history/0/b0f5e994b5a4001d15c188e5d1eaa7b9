@@ -7,7 +7,7 @@ import java.util.List;
 public class Generics {
 	public static void main(String[] args) {
 		
-		List<Object> nomes = Arrays.asList("Douglas","Hanna");
+		List<String> nomes = Arrays.asList("Douglas","Hanna");
 		List<Pessoa>pessoas = new ArrayList<Pessoa>();
 		pessoas.add(new Pessoa(1, "Douglas"));
 		pessoas.add(new Pessoa(2, "Flavia"));
@@ -28,8 +28,6 @@ public class Generics {
 	
 	}
 
-	//public static void imprimeLista(List<? extends Pessoa> lista) {
-	//public static void imprimeLista(List<? super Pessoa> lista) {
 	public static void imprimeLista(List<?> lista) {
 		for (Object obj : lista) {
 			System.out.println(obj);
