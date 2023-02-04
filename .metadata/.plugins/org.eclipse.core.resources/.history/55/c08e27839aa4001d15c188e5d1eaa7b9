@@ -1,0 +1,11 @@
+package aula1;
+
+public class AtrubuicaoReferencia {
+	public static void main(String[] args) {
+			
+		int intA = 1;
+		int intB = intA;
+	
+	System.out.println("intA: "+intA+", intB: "+intB);
+	}
+}
