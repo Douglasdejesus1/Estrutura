@@ -10,10 +10,7 @@ public class ListasEncadeadas {
 		minhaListaEncadeada.add("teste3");
 		minhaListaEncadeada.add("teste4");
 		
-		System.out.println(minhaListaEncadeada);
-		System.out.println(minhaListaEncadeada.remove(1));
-		System.out.println();
-		System.out.println(minhaListaEncadeada);
+		System.out.println(minhaListaEncadeada.get(5));
 	}
 }
 
@@ -110,7 +107,7 @@ class ListaEncadeada<T> {
 		if (index >= size()) {
 			int ultimoIndice = size() - 1;
 			throw new IndexOutOfBoundsException("Não existe conteúdo no indice: " + index + " desta lista"
-					+ ". Esta lista só vai até o indice: " + ultimoIndice);
+					+ ". Esta lista só vali até o indice: " + ultimoIndice);
 		}
 	}
 	public T remove(int index) {

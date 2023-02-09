@@ -11,9 +11,6 @@ public class ListasEncadeadas {
 		minhaListaEncadeada.add("teste4");
 		
 		System.out.println(minhaListaEncadeada);
-		System.out.println(minhaListaEncadeada.remove(1));
-		System.out.println();
-		System.out.println(minhaListaEncadeada);
 	}
 }
 
