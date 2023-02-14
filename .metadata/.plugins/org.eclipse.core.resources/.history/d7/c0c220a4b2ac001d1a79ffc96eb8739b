@@ -1,0 +1,30 @@
+package one.aula7.model;
+
+public class Obj extends ObjArvore<T>{
+
+	Integer meuValor;
+	
+	public Obj(Integer meuValor) {
+		this.meuValor = meuValor;
+	}
+	
+
+	@Override
+	public int hashCode() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int compareTo(T outro) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

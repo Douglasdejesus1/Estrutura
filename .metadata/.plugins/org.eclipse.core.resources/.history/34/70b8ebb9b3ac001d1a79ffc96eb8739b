@@ -1,0 +1,60 @@
+package one.aula7.model;
+
+import java.util.Objects;
+
+public class Obj extends ObjArvore<Obj>{
+
+	Integer meuValor;
+	
+	public Obj(Integer meuValor) {
+		this.meuValor = meuValor;
+	}
+	
+	
+
+	/*@Override
+	public int compareTo(T outro) {
+		// TODO Auto-generated method stub
+		return 0;
+	}*/
+
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+
+	@Override
+	public boolean equals(Object o) {
+		if(this==0) return true;
+		if(o==null || getClass != o.getClass()) return false;
+		Obj obj = (Obj) o;
+		return Objects.equals(meuValor, obj.meuValor);
+	}
+
+
+
+	@Override
+	public int hashCode() {
+		return 0;
+	}
+
+
+
+	@Override
+	public int compareTo(T outro) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+
+
+	@Override
+	public int compareTo(Obj outro) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

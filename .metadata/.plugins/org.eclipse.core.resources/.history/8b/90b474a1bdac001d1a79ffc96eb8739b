@@ -95,45 +95,44 @@ class ArvoreBinaria<T extends Comparable<T>> {
 		return atual;
 	}
 
-	public void exibirInOrdem(){
-        System.out.println("\n Exibindo InOrdem");
-        exibirInOrdem(this.raiz);
-    }
+	public void exibirInOrdem() {
+		System.out.print("\n Exibindo InOrdem");
+		exibirInOrdem(this.raiz);
+	}
 
-    private void exibirInOrdem(BinNo<T> atual){
-        if(atual != null){
-            exibirInOrdem(atual.getNoEsq());
-            System.out.print(atual.getConteudo() + ", ");
-            exibirInOrdem(atual.getNoDir());
-        }
-    }
+	private void exibirInOrdem(BinNo<T> atual) {
+		if (atual != null) {
+			exibirInOrdem(atual.getNoEsq());
+			System.out.print(atual.getConteudo() + ", ");
+			exibirPosOrdem(atual.getNoDir());
+		}
+	}
 
-    public void exibirPosOrdem(){
-        System.out.println("\n Exibindo PosOrdem");
-        exibirPosOrdem(this.raiz);
-    }
+	public void exibirPosOrdem() {
+		System.out.print("\n Exibindo PosOrdem");
+		exibirInOrdem(this.raiz);
+	}
 
-    private void exibirPosOrdem(BinNo<T> atual){
-        if(atual != null){
-            exibirPosOrdem(atual.getNoEsq());
-            exibirPosOrdem(atual.getNoDir());
-            System.out.print(atual.getConteudo() + ", ");
-        }
-    }
+	private void exibirPosOrdem(BinNo<T> atual) {
+		if (atual != null) {
+			exibirPosOrdem(atual.getNoEsq());
+			exibirPosOrdem(atual.getNoDir());
+			System.out.println(atual.getConteudo() + ", ");
+		}
+	}
 
-    public void exibirPreOrdem(){
-        System.out.println("\n Exibindo PreOrdem");
-        exibirPreOrdem(this.raiz);
-    }
+	public void exibirPreOrdem() {
+		System.out.println("\n Exibindo PosOrdem");
+		exibirInOrdem(this.raiz);
+	}
 
-    private void exibirPreOrdem(BinNo<T> atual){
-        if(atual != null){
-            System.out.print(atual.getConteudo() + ", ");
-            exibirPreOrdem(atual.getNoEsq());
-            exibirPreOrdem(atual.getNoDir());
-        }
-    }
-
+	private void exibirPreOrdem(BinNo<T> atual) {
+		if (atual != null) {
+			System.out.println(atual.getConteudo() + ", ");
+			exibirPreOrdem(atual.getNoEsq());
+			exibirPreOrdem(atual.getNoDir());
+		}
+	}
 
 	public void remover(T conteudo) {
 		try {
