@@ -1,3 +1,6 @@
 1676418040959	Rename type 'Carro'
 1676418564458	Rename type 'CarroStack'
 1676420043059	Rename type 'CarroQueue'
+1676420570917	Rename type 'CarroList'
+1676420785522	Rename local variable 'listCarros'
+1676421680991	Rename local variable 'aluno'

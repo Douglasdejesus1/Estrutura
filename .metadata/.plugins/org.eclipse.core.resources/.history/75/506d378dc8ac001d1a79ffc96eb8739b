@@ -1,0 +1,88 @@
+package one.aula8;
+
+import java.util.HashSet;
+import java.util.Objects;
+import java.util.Set;
+import java.util.TreeSet;
+
+public class InterfaceSet {
+	public static void main(String[] args) {
+		System.out.println("HASHSET");
+		Set<CarroSet> hashSetCarros = new HashSet<>();
+
+		hashSetCarros.add(new CarroSet("Ford"));
+		hashSetCarros.add(new CarroSet("Fiat"));
+		hashSetCarros.add(new CarroSet("Chevrolet"));
+		hashSetCarros.add(new CarroSet("Vw"));
+		hashSetCarros.add(new CarroSet("Vw2"));
+		
+		System.out.println(hashSetCarros);
+		System.out.println(hashSetCarros.contains("Renout"));
+		System.out.println(hashSetCarros);
+		System.out.println(hashSetCarros);
+		
+		
+		
+		System.out.println("TREESET");
+		
+		Set<CarroSet> treeSetCarros = new TreeSet<>();
+
+		treeSetCarros.add(new CarroSet("Ford"));
+		treeSetCarros.add(new CarroSet("Fiat"));
+		treeSetCarros.add(new CarroSet("Chevrolet"));
+		treeSetCarros.add(new CarroSet("Vw"));
+		treeSetCarros.add(new CarroSet("Vw"));
+		
+		System.out.println(treeSetCarros);
+		System.out.println(treeSetCarros);
+		System.out.println(treeSetCarros);
+		
+	}
+
+}
+class CarroSet implements Comparable<CarroSet>{
+	String marca;
+
+	public CarroSet(String marca) {
+		super();
+		this.marca = marca;
+	}
+
+	public String getMarca() {
+		return marca;
+	}
+
+	public void setMarca(String marca) {
+		this.marca = marca;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(marca);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Carro other = (Carro) obj;
+		return Objects.equals(marca, other.marca);
+	}
+
+	@Override
+	public String toString() {
+		return "Carro [marca=" + marca + "]";
+	}
+
+	@Override
+	public int compareTo(CarroSet o) {
+		
+		return this.marca.compareTo(o.getMarca());
+	}
+	
+
+}

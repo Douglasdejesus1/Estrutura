@@ -7,16 +7,16 @@ import java.util.Objects;
 public class EqualsHashCode {
 	public static void main(String[] args) {
 		
-		List<CarroList> listaCarros = new ArrayList<>();
-		listaCarros.add(new CarroList("Ford"));
-		listaCarros.add(new CarroList("Fiat"));
-		listaCarros.add(new CarroList("Chevrolet"));
-		listaCarros.add(new CarroList("Vw"));
+		List<CarroSet> listaCarros = new ArrayList<>();
+		listaCarros.add(new CarroSet("Ford"));
+		listaCarros.add(new CarroSet("Fiat"));
+		listaCarros.add(new CarroSet("Chevrolet"));
+		listaCarros.add(new CarroSet("Vw"));
 		
 		System.out.println(listaCarros);
-		System.out.println(listaCarros.contains(new CarroList("Ford")));
+		System.out.println(listaCarros.contains(new CarroSet("Ford")));
 		System.out.println(listaCarros.size());
-		System.out.println((new CarroList("Ford").hashCode()));
+		System.out.println((new CarroSet("Ford").hashCode()));
 	}
 	
 }
@@ -49,7 +49,7 @@ class Carro{
 		if (this == obj)return true;
 		if (obj == null)return false;
 		if (getClass() != obj.getClass())return false;
-		CarroList other = (CarroList) obj;
+		CarroSet other = (CarroSet) obj;
 		return Objects.equals(marca, other.marca);
 	}
 

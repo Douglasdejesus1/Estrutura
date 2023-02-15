@@ -1,0 +1,34 @@
+package one.aula8;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class InterfaceMap {
+public static void main(String[] args) {
+	Map<String,String>aluno = new HashMap<>();
+	
+	aluno.put("Name", "Joao");
+	aluno.put("Idade", "17");
+	aluno.put("Media", "8.5");
+	aluno.put("Turma", "3a");
+	
+Map<String,String>aluno2 = new HashMap<>();
+	
+	aluno2.put("Name", "Maria");
+	aluno2.put("Idade", "16");
+	aluno2.put("Media", "7.2");
+	aluno2.put("Turma", "3b");
+	
+	System.out.println(aluno2);
+	System.out.println(aluno2.keySet());
+	System.out.println(aluno2.values());
+
+	List<Map<String,String>> alunos = new ArrayList<>();
+	
+	alunos.add(aluno0);
+	alunos.add(aluno1);
+	System.out.println(alunos.get(1));
+}
+}
